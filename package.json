@@ -1,0 +1,54 @@
+{
+  "name": "@rmarting/my-devquote-plugin",
+  "version": "0.0.2",
+  "description": "This is an example of dynamic public to use with Red Hat Developer Hub. It is basically a wrapper of the original [Dev Quotes plugin](https://github.com/Parsifal-M/backstage-dev-quotes)",
+  "main": "src/index.js",
+  "author": "Roman Martin Gil",
+  "contributors": [
+    { 
+      "name": "Roman Martin",
+      "email": "jromanmartin@gmail.com"
+    }
+  ],
+  "maintainers": [
+     {
+       "name": "Roman Martin",
+       "email": "jromanmartin@gmail.com"
+     }
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rmarting/my-devquote-plugin.git"
+  },  
+  "publishConfig": {
+    "access": "public"
+  },
+  "backstage": {
+    "role": "frontend-plugin"
+  },
+  "dependencies": {
+    "@parsifal-m/plugin-dev-quotes-homepage": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@backstage/cli": "0.25.0",
+    "@janus-idp/cli": "1.4.7"
+  },
+  "scripts": {
+    "clean": "backstage-cli package clean",
+    "build": "backstage-cli package build",
+    "export-dynamic": "janus-cli package export-dynamic-plugin"
+  },
+  "files": [
+    "dist",
+    "dist-scalprum"
+  ],
+  "scalprum": {
+    "name": "rmarting.my-devquote-plugin",
+    "exposedModules": {
+      "PluginRoot": "./src/index.ts"
+    }
+  }
+}
