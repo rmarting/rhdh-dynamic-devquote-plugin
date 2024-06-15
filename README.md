@@ -1,7 +1,7 @@
-# My Dev Quote Plugin for Red Hat Developer Hub
+# Dev Quote Dynamic Plugin for Red Hat Developer Hub
 
-This is an example of dynamic public to use with Red Hat Developer Hub. It is
-basically a wrapper of the original [Dev Quotes plugin](https://github.com/Parsifal-M/backstage-dev-quotes)
+This is an example of a dynamic public to use with Red Hat Developer Hub.
+It is basically a wrapper of the original [Dev Quotes plugin](https://github.com/Parsifal-M/backstage-dev-quotes)
 
 ## Configuration
 
@@ -31,7 +31,7 @@ deployed into Red Hat Developer Hub.
 
 The integrity value is described with the command:
 
-`npm info @rmarting/my-devquote-plugin@0.0.1`
+`npm info @rmarting/rhdh-dynamic-devquote-plugin@0.0.3`
 
 An example of that configuration can be:
 
@@ -41,24 +41,29 @@ global:
     includes:
       - dynamic-plugins.default.yaml
     plugins:
-      - package: '@rmarting/my-devquote-plugin@0.0.1'
-        integrity: sha512-nFo7JLUe5qyPw8Gv6sK1kqZfLczs4tAcqVjSM3RUeTZwmUZqoXBv31FtrprhIJHng2W8XflxwLqjZ119pwQpaQ==
+      - package: '@rmarting/rhdh-dynamic-devquote-plugin@0.0.3'
+        integrity: sha512-Kmg6UnUp1q4ad6XQAylQRd5DWQSgE+kD1HB7XrO5r7B/63bddROkXfmw2zx6zoegI+6+spiM28GUjmsreyXEBA==
         pluginConfig:
           dynamicPlugins:
             frontend:
-              rmarting.my-devquote-plugin:
+              rmarting.rhdh-dynamic-devquote-plugin:
                 mountPoints:
-                  - config:
+                  - mountPoint: entity.page.overview/cards
+                    importName: DevQuote
+                    config:
                       layout:
                         gridColumnEnd:
                           lg: span 4
                           md: span 6
-                          xs: span 12
-                    importName: DevQuote
-                    mountPoint: entity.page.overview/cards
+                          xs: span 12                    
                 dynamicRoutes:
                   - importName: DevQuote
                     menuItem:
                       text: Quote
                     path: /devquote
 ```
+
+## References
+
+* [Janus-IDP - Dynamic Plugins Support](https://github.com/janus-idp/backstage-showcase/blob/main/showcase-docs/dynamic-plugins.md)
+* [Janus-IDP - Helm Chart](https://artifacthub.io/packages/helm/janus-idp/backstage)
