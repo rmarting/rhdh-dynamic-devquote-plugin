@@ -31,7 +31,7 @@ deployed into Red Hat Developer Hub.
 
 The integrity value is described with the command:
 
-`npm info @rmarting/rhdh-dynamic-devquote-plugin@0.0.3`
+`npm info @rmarting/rhdh-dynamic-devquote-plugin@0.0.4`
 
 An example of that configuration can be:
 
@@ -41,8 +41,8 @@ global:
     includes:
       - dynamic-plugins.default.yaml
     plugins:
-      - package: '@rmarting/rhdh-dynamic-devquote-plugin@0.0.3'
-        integrity: sha512-Kmg6UnUp1q4ad6XQAylQRd5DWQSgE+kD1HB7XrO5r7B/63bddROkXfmw2zx6zoegI+6+spiM28GUjmsreyXEBA==
+      - package: '@rmarting/rhdh-dynamic-devquote-plugin@0.0.4'
+        integrity: sha512-FxJ6m08GvO3f2qW8MOb+GTXQJyExA1aVAK8pzXTjAIyuENoVNbg3ajzuBTysJXLykNQwA+d9TIrbQUc/kdcpAA==
         pluginConfig:
           dynamicPlugins:
             frontend:
@@ -55,7 +55,7 @@ global:
                         gridColumnEnd:
                           lg: span 4
                           md: span 6
-                          xs: span 12                    
+                          xs: span 12
                 dynamicRoutes:
                   - importName: DevQuote
                     menuItem:
