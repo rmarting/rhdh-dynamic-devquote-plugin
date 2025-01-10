@@ -1,0 +1,13 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: rhdh-dynamic-devquote-plugin
+  annotations:
+    backstage.io/kubernetes-id: rhdh-dynamic-devquote-plugin
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: rmarting/rhdh-dynamic-devquote-plugin
+spec:
+  type: library
+  lifecycle: production
+  owner: rmarting
