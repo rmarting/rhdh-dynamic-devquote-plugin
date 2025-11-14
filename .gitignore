@@ -130,3 +130,8 @@ dist-types
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# RHDH Dynamic Plugin Factory
+workspace
+outputs
+config/.env
