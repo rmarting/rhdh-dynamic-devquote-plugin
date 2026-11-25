@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@backstage/cli": "0.25.6",
-    "@janus-idp/cli": "1.4.7"
+    "@janus-idp/cli": "1.19.1"
   },
   "scripts": {
     "clean": "backstage-cli package clean",
